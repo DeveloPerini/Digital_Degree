@@ -1,0 +1,54 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/add_student.css' %}">
+  <title>Add Student</title>
+</head>
+<body>
+  <nav>
+    <a href="/home"><h1>Digital Degree</h1></a> 
+    <div>
+      <a href="/home/logout">Log out</a>
+    </div>
+  </nav>
+  <form action="{% url 'add_student' %}" method="post">
+    {% if warning %}
+          <div class="warning">{{ warning }}</div>
+    {% endif %}
+    {% csrf_token %}
+    <h2>Inserisci studente</h2>
+    <br>
+    <label for="name">Nome:</label>
+    <input type="text" name="name" id="name">
+    <br>
+    <label for="surname">Cognome:</label>
+    <input type="text" name="surname" id="surname">
+    <br>
+    <label for="birth_date">Data di nascita:</label>
+    <input type="date" name="birth_date" id="birth_date">
+    <br>
+    <label for="graduation_date">Data di laurea:</label>
+    <input type="date" name="graduation_date" id="graduation_date">
+    <br>
+    <label for="grade">Voto finale:</label>
+    <input type="number" name="grade" id="grade" min="0" max="10">
+    <br>
+    <label for="degree">Titolo di studio:</label>
+    <select name="degree" id="degree">
+      <option value="BA">Bachelor</option>
+      <option value="MA">Master</option>
+      <option value="PHD">Doctorate</option>
+    </select>
+    <br>
+    <input type="submit" value="Invia">
+  </form>
+</body>
+</html>
+
+ 

@@ -1,0 +1,34 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    <title>Ricerca Studente</title>
+</head>
+<body>
+    <nav>
+        <a href="/home"><h1>Digital Degree</h1></a> 
+        <div>
+          <a href="/home/logout">Log out</a>
+        </div>
+    </nav>
+
+    
+  
+    <form class="search" method="get" action="{% url 'student_details' %}">
+      {% for message in messages %}
+      <p class="message">{{ message }}</p>
+      {% endfor %}
+      <label for="identifier">Identificativo studente:</label><br>
+      <input type="text" id="identifier" name="identifier"><br>
+      <input class="cerca" type="submit" value="Cerca">
+    </form> 
+    
+</body>
+</html>
+ 

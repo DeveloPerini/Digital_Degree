@@ -1,0 +1,44 @@
+.search {
+    width: 50%; 
+    margin: 0 auto; 
+    text-align: center;
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 120px; 
+  }
+  
+  
+  label, input[type="text"] {
+    display: block; 
+    margin: 20px auto; 
+    width: 50%; 
+    font-size: 18px; 
+  }
+  
+  
+ .cerca{
+  padding: 10px;
+  font-size: 15px;
+  background-color: #4CAF50;
+  color: #fff;
+  width: 100px;
+  border: 1px solid #333;
+  cursor: pointer;
+  border-radius: 5px;
+  
+ }
+
+ .cerca:hover{
+  background-color: #45a049;
+
+ }
+
+ .message{
+  color: red;
+  font-size: 20px;
+ }
+
+
+ 

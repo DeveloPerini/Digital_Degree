@@ -1,0 +1,39 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/student_list.css' %}">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav>
+      <a href="/home"><h1>Digital Degree</h1></a> 
+      <div>
+        <a href="/home/logout">Log out</a>
+      </div>
+    </nav>
+    
+    <div class="list">
+        {% for student in students %}
+          <h2>{{ student.name }} {{ student.surname }}</h2>
+          <p>Data di nascita: {{ student.birth_date }}</p>
+          <p>Data di laurea: {{ student.graduation_date }}</p>
+          <p>Voto finale: {{ student.grade }}</p>
+          <p>Titolo di studio: {{ student.get_degree_display }}</p>
+          <p>Identificativo: {{ student.identifier }}</p>
+          <p>txId: {{ student.txId }}</p>
+
+        {% endfor %}
+      </div>
+      
+    
+</body>
+</html>
+ 
