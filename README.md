@@ -19,10 +19,10 @@ Redis is used as the server for this application.
 ### Installation:
 1) Clone this repository
 2) Create your virtualenvironment with `python -m venv yourvenv`
-2) Install the required dependencies with `pip install -r requirements.txt`
-3) Set up the Ethereum account for the transmission of transactions 
-4) Add your eth account address and private key in "add_student" function in views.py
-5) Run the server with `python manage.py runserver`
+3) Install the required dependencies with `pip install -r requirements.txt`
+4) Set up the Ethereum account for the transmission of transactions 
+5) Add your eth account address and private key in "add_student" function in views.py
+6) Run the server with `python manage.py runserver`
 
 ### Usage:
 1) To create an administrator, you will have to run the command `python manage.py createsuperuser`
